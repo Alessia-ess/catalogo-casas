@@ -1,0 +1,171 @@
+:root {
+  --primary: #7e6bdf;
+  --primary-light: #d6bcfa;
+  --secondary: #7f9cf5;
+  --accent: #803fd5;
+  --background: #f8f9fa;
+  --white: #ffffff;
+  --text: #2d3748;
+  --gray: #718096;
+  --hover: #7a26da;
+  --highlight: #7541d6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.about-section {
+  padding: 60px 20px;
+  background-color: var(--background);
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 42px;
+  color: #1e1e2f;
+  margin-bottom: 15px;
+}
+
+.about-header p {
+  font-size: 20px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 40px;
+}
+
+.about-item {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.about-item:hover {
+  transform: translateY(-5px);
+}
+
+.about-item h2 {
+  font-size: 28px;
+  color: #ff6347;
+  margin-bottom: 15px;
+}
+
+.about-item p {
+  font-size: 17px;
+  color: #444;
+}
+
+.about-item ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.about-item li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.about-item li::before {
+  content: "✔";
+  color: #ff6347;
+  position: absolute;
+  left: 0;
+}
+
+.footer {
+  background-color: var(--accent);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+.footer-compact {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-brand h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.footer-brand p {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.footer-copyright {
+  color: var(--white);
+  margin-top: 20px;
+}
+
+.footer-compact a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-compact a:hover {
+  color: var(--highlight);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-header h1 {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,409 @@
+:root {
+  --primary: #7e6bdf;
+  --primary-light: #d6bcfa;
+  --secondary: #7f9cf5;
+  --accent: #803fd5;
+  --background: #f8f9fa;
+  --white: #ffffff;
+  --text: #2d3748;
+  --gray: #718096;
+  --hover: #7a26da;
+  --highlight: #7541d6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  padding: 20px 40px;
+  color: black;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-left {
+  flex: 1;
+}
+
+.navbar .logo {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--white);
+  text-transform: uppercase;
+  font-family: "Dancing Script", cursive;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+
+.nav-links a:hover {
+  background-color: var(--hover);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--white);
+  padding: 80px 40px;
+  margin-top: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-content .btn {
+  background-color: var(--white);
+  color: var(--primary);
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+.hero-content .btn:hover {
+  background-color: var(--hover);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.hero-image img {
+  max-width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.features {
+  background-color: var(--white);
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--primary);
+  font-family: "Dancing Script", cursive;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  width: 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--primary-light);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card i {
+  font-size: 2.5rem;
+  color: var(--hover);
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--hover);
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.destacados {
+  background-color: var(--background);
+  padding: 60px 40px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.destacados h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--primary);
+  font-family: "Dancing Script", cursive;
+}
+
+.property-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.property-card {
+  background-color: var(--white);
+  padding: 25px;
+  width: 30%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.property-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.property-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.property-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.property-card .price {
+  font-size: 1.5rem;
+  color: var(--gray);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.producto-card p {
+  font-size: 1.1rem;
+  color: var(--hover);
+}
+
+.promo {
+  background: var(--accent);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 40px;
+  margin-top: 40px;
+}
+
+.promo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.promo p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.promo .btn-promo {
+  background-color: var(--white);
+  color: #24ca77;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+.promo .btn-promo:hover {
+  background-color: var(--hover);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.footer {
+  background-color: var(--accent);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--white);
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    color: var(--white);
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    position: relative;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--primary);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 15px 20px;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+  }
+
+  .navbar .hamburger {
+    display: block;
+    position: static;
+    right: 20px;
+    top: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 0px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .features-grid,
+  .property-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .feature-card,
+  .property-card {
+    width: 100%;
+  }
+
+  .menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none !important;
+  }
+  .nav-links {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .features h2,
+  .destacados h2,
+  .promo h2 {
+    font-size: 2rem;
+  }
+}
